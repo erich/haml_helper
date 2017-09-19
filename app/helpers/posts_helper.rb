@@ -3,9 +3,8 @@ module PostsHelper
     [
       ["Post", posts_path, "whatever"]
     ].each do |name, link, _|
-      capture_haml do
-        link_to name, link
-      end
+        haml_concat(link_to name, link)
     end
+    #haml_concat(link_to("hello", posts_path))
   end
 end
